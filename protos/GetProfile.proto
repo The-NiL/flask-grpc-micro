@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+
+service GetUserProfile{
+    
+    rpc GetUserProfile(Message) returns (MessageResponse) {}
+
+}
+ 
+
+message Message{
+    string username = 1;
+}
+
+
+message MessageResponse{
+    string fname = 1;
+    string lname = 2;
+    string nationalcode = 3;
+    string phone = 4;
+    string address = 5;
+    string avatar = 6; 
+    string city = 7;
+    string neighborhood = 8;
+    string gender = 9;
+    bool maritalStatus = 10;
+    string rate = 11;
+}

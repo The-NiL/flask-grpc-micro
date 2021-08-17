@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+service EditJobCondition{
+    
+    rpc EditUserJobCondition(EditCondtionInput) returns (EditCondtionOutput) {}
+
+}
+ 
+
+message EditCondtionInput{
+    string username = 1;
+    string work = 2;
+    bool isPetFriendly = 3;
+    int32 startTime = 4;
+    int32 endTime = 5;
+}
+
+
+message EditCondtionOutput{
+    string message = 1;
+    bool status = 2; //if 0 failed
+}

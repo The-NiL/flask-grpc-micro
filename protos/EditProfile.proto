@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+
+service EditProfile{
+    
+    rpc EditUserProfile(InputMessage) returns (Response) {}
+
+}
+ 
+
+message InputMessage{
+    string username = 1;
+    string fname = 2;
+    string lname = 3;
+    string nationalcode = 4;
+    string phone = 5;
+    string address = 6;
+    //string avatar = ;    on developement :)
+    string city = 7;
+    string neighborhood = 8;
+    string gender = 9;
+    bool maritalStatus = 10;
+    string rate = 11;
+}
+
+
+message Response{
+    string message = 1;
+    bool status = 2; //if 0 failed
+}

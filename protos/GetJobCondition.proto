@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+service GetJobCondition{
+    
+    rpc GetUserJobCondition(CondtionInput) returns (CondtionOutput) {}
+
+}
+ 
+
+message CondtionInput{
+    string username = 1;
+}
+
+
+message CondtionOutput{
+    string work = 1;
+    bool isPetFriendly = 2;
+    int32 startTime = 3;
+    int32 endTime = 4;
+}
